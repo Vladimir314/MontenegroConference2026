@@ -31,8 +31,8 @@ body{
     color: #505050; 
     text-align:left;
     font-family:'Roboto',sans-serif;
-    font-size:1em;
-    line-height:1.5em;
+     font-size: 1.125em;
+    line-height:1.6em;
     margin: 60px auto;
     width: 1000px;
 }
@@ -43,14 +43,27 @@ a.current:hover{color: #e82945;}
 a:hover{color: #b2132e;}
 a:active{color: #e82945;}
 h1,h2,h3,h4{clear:left; color: #813c54; margin:1.5em 0em 1em 0em; font-family:'Roboto Slab',serif; text-shadow: 1px 1px 2px #d0d0d0;}
-h1{font-size:2.67em;}
+h1 {
+  font-size: 2.2em;
+  color: #813c54;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+  text-shadow: 1px 1px 2px #d0d0d0;
+}
+
 h2{font-size:2.00em;}
 h3{font-size:1.67em;}
 h4{font-size:1.33em;}
+h1, h2, h3 { font-weight: 500;}
+
 p{list-style:none; margin:24px auto 24px auto; padding:0px; width:900px; text-align:left;}
 li a, p a {text-decoration:underline; text-decoration-color:#b8860b;}
 ul{list-style:none; margin:24px auto 24px auto; padding:0px; width:800px; text-align:left;}
 ul li{list-style:none; margin:0px auto 0px auto; padding:0px; text-align:left;}
+p, ul {
+  width: 90%; /* responsive width */
+  max-width: 900px;
+}
 i,em{font-style:italic;}
 b,strong{font-weight:bold;}
 sup{
@@ -77,23 +90,168 @@ th,td{
 }
 
 /* Website Banner */
-.banner {position: relative; font-family:'Roboto Slab',serif;}
-.top-left {font-size:5.33em; color: #505050; background: #fafafa; text-align: center; width: 1000px; height: 67px; position: absolute; padding: 36px 0 0 0; top: 0px;}
-.bottom-right {font-size:2.33em; color: #fafafa; line-height: 1.5em; width: auto; height: 100px; padding: 0px 27px 27px 0px; text-align: right; position: absolute; bottom: 0px; right: 0px; text-shadow: 0px 0px 6px #000000;}
+.banner {
+  position: relative;
+  font-family: 'Roboto Slab', serif;
+  text-align: center;
+  margin: 0 auto;
+  max-width: 1000px; /* keeps layout centered on large screens */
+ margin-bottom: 0px; /* adds space below the image */
+}
+
+.top-left {
+  position: static; /* header above image */
+  display: block;
+  font-size: 4.5em;
+  line-height: 1.1;
+  color: #505050;
+  margin-bottom: 10px; /* space between header and image */
+  white-space: normal;
+}
+
+.banner img {
+  width: 85%;
+  max-width: 1000px;
+  margin: 0 auto;
+  border-radius: 6px;
+}
+
+
+/* 📱 Responsive scaling for smaller screens */
+@media (max-width: 768px) {
+  .top-left {
+    font-size: 3em;
+    margin-bottom: 15px;
+  }
+   .bottom-right {
+    bottom: 15px;
+    font-size: 1.3em;
+    width: 95%;
+  }
+    p, ul {
+    font-size: 1.2em;
+    width: 95%;
+  }
+}
+
+
+
+@media (max-width: 480px) {
+  .top-left {
+    font-size: 2.2em;
+    margin-bottom: 10px;
+  }
+}
+
+
+/*.top-left {font-size:5.33em;
+     color: #505050;
+      background: #fafafa;
+       text-align: center;
+        width: 1000px;
+         height: 67px;
+          position: absolute;
+           padding: 36px 0 0 0;
+            top: 0px;}*/
+/* Gradient background for banner + navigation */
+.banner {
+  background: linear-gradient(
+    to bottom,
+    #fafafa 0%,        /* light top tone */
+    #f5e9ec 40%,       /* soft tint of heading color (#813c54) */
+    #fafafa 100%       /* fade back to page background */
+  );
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(129, 60, 84, 0.15);
+}
+
+table.navigation {
+  background: linear-gradient(
+    to right,
+    #fafafa 0%,
+    #f8f2f4 50%,       /* subtle rosy tone */
+    #fafafa 100%
+  );
+  border-top: 2px solid #813c54;
+  border-bottom: 2px solid #813c54;
+  box-shadow: 0 2px 6px rgba(129, 60, 84, 0.15);
+}
+
+.bottom-right {
+  position: absolute;
+  bottom: 25px; /* lifts the bar higher */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  color: #fafafa;
+  font-size: 1.6em;
+  line-height: 1.4;
+  text-align: center;
+  padding: 10px 0;
+  text-shadow: 0 0 6px #000000;
+  border-radius: 6px;
+
+  /* ✨ Gradient overlay fading upward */
+  background: linear-gradient(
+    to top,
+    rgba(81, 115, 158, 0.45) 0%,   /* navy tint at bottom */
+    rgba(81, 115, 158, 0.25) 60%,  /* soft fade upward */
+    rgba(81, 115, 158, 0.0) 100%   /* transparent top */
+  );
+}
+
+
+
+
+
+/* .bottom-right {font-size:2.33em; color: #fafafa; line-height: 1.5em; width: auto; height: 100px; padding: 0px 27px 27px 0px; text-align: right; position: absolute; bottom: 0px; right: 0px; text-shadow: 0px 0px 6px #000000;} */
 
 /* Conference Title Logo */
 .title1{color: #b2132e; text-shadow: 1px 1px 3px #c0c0c0;} 
 .title2{color: #52739e; text-shadow: 1px 1px 3px #c0c0c0;}
 .year{color: #505050; font-size:0.67em; font-weight: lighter;}
 
-/* Navigation Links (Home, Registration, etc) */
-table.navigation{width:800px;}
+table.navigation {
+  width: 100%;
+  background-color: #fafafa; /* same as page background */
+  border-top: 2px solid #813c54;
+  border-bottom: 2px solid #813c54;
+  padding: 12px 0;
+  text-align: center;
+   box-shadow: 0 2px 6px rgba(129, 60, 84, 0.15);
+   margin-top: 0px;
+   margin-bottom: 40px;
+}
+
+td.navigation a {
+  display: inline-block;
+  padding: 8px 18px;
+  font-size: 1.2em;
+  font-weight: 500;
+  color: #813c54; /* heading color */
+  transition: color 0.3s, background-color 0.3s;
+}
+
+td.navigation a:hover {
+  background-color: #c63a4a; /* reddish hover */
+  color: #fafafa;
+  border-radius: 4px;
+}
+
+
+
+/*table.navigation{width:800px;  margin-top: 20px;  margin-bottom: 30px;}
 td.navigation{font-size:1.67em; white-space:nowrap; width:20%; text-align:center; vertical-align:middle; padding:0px 0px 0px 0px;}
 
 /* Sponsor Images */
 table.sponsors{width:800px;}
 td.sponsor{white-space:nowrap; width:33%; text-align:center; vertical-align:middle; padding:0px 0px 0px 0px;}
-td.sponsor img{width: 100%}
+td.sponsor img {
+  width: 50%; 
+  max-width: 400px;
+}
 
 /* The Table on the Program Page */
 td.room{padding: 4px 12px 4px 4px; width: 90%; vertical-align:bottom; font-size:1.67em; color: #52739e; height:32px;}
@@ -115,7 +273,39 @@ table.flyers{width:800px;}
 td.flyer{white-space:nowrap; width:50%; text-align:center; vertical-align:middle; padding:0px 0px 0px 0px;}
 td.sponsor img{width: 100%}
 
-footer{font-size:0.875em; margin-top:12em; text-align:center;}
+footer{font-size:0.875em; margin-top:6em; text-align:center;}
+
+
+/* Registration page styling */
+#call-for-abstracts {
+  margin: 2em auto;
+  text-align: center;
+  font-family: 'Roboto Slab', serif;
+  color: #813c54; /* heading color from main theme */
+  max-width: 900px;
+}
+
+#call-for-abstracts h2 {
+  color: #813c54;
+  font-size: 2em;
+  margin-bottom: 0.5em;
+  text-shadow: 1px 1px 2px #d0d0d0;
+}
+
+#call-for-abstracts p {
+  font-size: 1.125em;
+  line-height: 1.6;
+  color: #505050;
+  text-align: justify;
+  margin: 0 auto 1.5em auto;
+  width: 90%;
+}
+
+#call-for-abstracts span {
+  font-weight: bold;
+  color: #b2132e; /* reddish accent for deadline */
+}
+
 
 /* My hacky way of making the site mobile-friendly */
 @media only screen and (max-width: 1100px) {
