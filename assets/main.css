@@ -185,10 +185,11 @@ th,td{
 }
 
 .banner img {
-  width: 100%;
-  max-width: 1280px;
+  display: block;
+  width: 88%;
+  max-width: 1120px;
   margin: 0 auto;
-  border-radius: 6px;
+  border-radius: 0;
 }
 
 
@@ -230,16 +231,11 @@ th,td{
             top: 0px;}*/
 /* Gradient background for banner + navigation */
 .banner {
-  background: linear-gradient(
-    to bottom,
-    #fafafa 0%,        /* light top tone */
-    #f5e9ec 40%,       /* soft tint of heading color (#813c54) */
-    #fafafa 100%       /* fade back to page background */
-  );
+  background: #fafafa;
   padding-top: 20px;
   padding-bottom: 20px;
-  border-radius: 6px;
-  box-shadow: 0 2px 6px rgba(129, 60, 84, 0.15);
+  border-radius: 0;
+  box-shadow: none;
 }
 
 table.navigation {
@@ -267,14 +263,6 @@ table.navigation {
   padding: 10px 0;
   text-shadow: 0 0 6px #000000;
   border-radius: 6px;
-
-  /* ✨ Gradient overlay fading upward */
-  background: linear-gradient(
-    to top,
-    rgba(81, 115, 158, 0.45) 0%,   /* navy tint at bottom */
-    rgba(81, 115, 158, 0.25) 60%,  /* soft fade upward */
-    rgba(81, 115, 158, 0.0) 100%   /* transparent top */
-  );
 }
 
 
