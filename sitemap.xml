@@ -11,6 +11,12 @@
        <loc>WEBSITE/program</loc>
    </url>
    <url>
+       <loc>WEBSITE/program/abstracts</loc>
+   </url>
+   <url>
+       <loc>WEBSITE/participants</loc>
+   </url>
+   <url>
        <loc>WEBSITE/directions</loc>
    </url>
 </urlset> 
