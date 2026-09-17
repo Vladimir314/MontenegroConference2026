@@ -137,10 +137,78 @@ table.speakers tbody tr:hover {
   background-color: #fcf8f9;
 }
 
+.program-note {
+  margin-bottom: 18px;
+}
+
+.schedule-day {
+  width: 90%;
+  max-width: 1150px;
+  margin: 0 auto 34px auto;
+}
+
+.schedule-day h3 {
+  margin: 1em 0 0.4em 0;
+}
+
+table.schedule {
+  margin: 0;
+  border-collapse: collapse;
+}
+
+table.schedule th,
+table.schedule td {
+  padding: 9px 12px;
+  vertical-align: top;
+  border-bottom: 1px solid #e6dce0;
+}
+
+table.schedule th {
+  color: #813c54;
+  font-family: 'Roboto Slab', serif;
+  font-weight: 600;
+  background-color: #f5e9ec;
+}
+
+table.schedule th:first-child,
+table.schedule td:first-child {
+  width: 170px;
+  white-space: nowrap;
+}
+
+table.schedule tbody tr:hover {
+  background-color: #fcf8f9;
+}
+
+table.schedule tr.break td {
+  color: #6e6870;
+  font-style: italic;
+}
+
+.online {
+  color: #6e6870;
+  font-style: italic;
+}
+
 table.speakers td a {
   text-decoration: underline;
   text-decoration-color: #b8860b;
 }
+
+  .schedule-day {
+    width: 95%;
+    overflow-x: auto;
+  }
+
+  table.schedule {
+    min-width: 520px;
+  }
+
+  table.schedule th,
+  table.schedule td {
+    padding: 8px 6px;
+    font-size: 0.9em;
+  }
 
 @media (max-width: 768px) {
   table.speakers {
